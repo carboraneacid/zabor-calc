@@ -1,0 +1,64 @@
+<meta charset="utf-8">
+<html> <head>
+  <link href='http://www.zaborsp.ru/calculator/css/calcstyle.css' rel="stylesheet" type="text/css" />
+  <script src='http://www.zaborsp.ru/calculator/js/jquery.min.js'></script>
+  <script src='http://www.zaborsp.ru/calculator/js/jquery.formstyler.min.js'></script>
+  <script src='http://www.zaborsp.ru/calculator/js/jquery.fancybox.js'></script>
+  <script src='http://www.zaborsp.ru/calculator/js/main.js'></script>
+  <script src='http://www.zaborsp.ru/calculator/js/html5shiv.js'></script>
+  <script src='http://www.zaborsp.ru/calculator/js/html5.js'></script>
+  <script src='http://www.zaborsp.ru/calculator/js/freshform.js'></script>
+ </head> <body>
+  <script src='http://www.zaborsp.ru/calculator/js/calc.js'></script>
+<div>
+ <div id='tabsContain'>
+  <div id='form1' class='tabCont active'>
+    <div class='leftSide'>
+      <p><span>Общая длина:</span><input type='text' class='inpTxt' data-name='length'/></p>
+      <p><span>Высота забора:</span><select class='inpSel' data-name='height'><option value='150' selected>150 см</option><option value='170'>170 см</option><option value='180'>180 см</option><option value='200'>200 см</option></select></p>
+      <p><span>Выбор покрытия:</span><select class='inpSel' data-name='cover'><option value='1' selected>С полимерным покрытием</option><option value='2'>Двустороннее покрытие</option><option value='3'>Без покрытия (оцинковка)</option></select></p>
+      <p><span>Кол-во горизонталей (лаги):</span><select class='inpSel' data-name='lag'><option value='2' selected>2</option><option value='3'>3</option></select></p>
+      <p><span>Кол-во ворот:</span><select class='inpSel' data-name='gate'><option value='0' selected>0</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option></select></p>
+      <p><span>Ширина ворот:</span><select class='inpSel' data-name='gateWidth'><option value='3000' selected>3 м</option><option value='3500'>3.5 м</option><option value='4000'>4 м</option></select></p>
+      <p><span>Кол-во калиток:</span><select class='inpSel' data-name='wicket'><option value='0' selected>0</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option></select></p>
+      <p><span>Расстояние от МКАД, км:</span><input type='text' class='inpTxt' data-name='afterMkad'/></p>
+      <p><span><label>Вывоз генератора (если нет электричества):</label></span><span class='fchbox unchecked'><input type='checkbox' data-name='generator' value='1' /><span></span></span></p>
+    </div>
+    <div style="display: inline-block;
+    vertical-align: top;
+    width: 193px;
+    padding-left: 23px;">
+      <p><span>Итого за материалы:</span><input type='text' class='inpTxt' data-name='itogMat' readonly /></p>
+      <p><span>Стоимость работ:</span><input type='text' class='inpTxt' data-name='itogWork' readonly /></p>
+      <p><span style='color:#ff0000'>Итого за материалы и работу:</span><input type='text' class='inpTxt' data-name='itogAll' readonly /></p>
+    </div>
+    <table class='calcTable'>
+      <thead>
+        <tr>
+          <th width='330' align='left'>Наименование</th>
+          <th>Количество</th>
+          <th>Ед.изм.</th>
+          <th>Цена</th>
+          <th>Сумма</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td data-td='tr10'>Столб проф.труба 60 x 60 мм. h=2500 мм.</td><td data-td='tr11'></td><td data-td='tr12'>шт.</td><td data-td='tr13'></td><td data-td='tr14'></td></tr>
+        <tr><td data-td='tr20'>Лаги проф. труба 40 x 20 мм. (в два ряда)</td><td data-td='tr21'></td><td data-td='tr22'>п.м.</td><td data-td='tr23'></td><td data-td='tr24'></td></tr>
+        <tr><td data-td='tr30'>Грунтовка металла ГФ021 корич.</td><td data-td='tr31'></td><td data-td='tr32'>п.м.</td><td data-td='tr33'></td><td data-td='tr34'></td></tr>
+        <tr><td data-td='tr40'>Профлист двухсторонний h=1500 мм.</td><td data-td='tr41'></td><td data-td='tr42'>кв.м.</td><td data-td='tr43'></td><td data-td='tr44'></td></tr>
+        <tr><td data-td='tr50'>Заводская резка листа</td><td data-td='tr51'></td><td data-td='tr52'>шт.</td><td data-td='tr53'></td><td data-td='tr54'></td></tr>
+        <tr><td data-td='tr60'>Ворота распашные, шириной 3 м.</td><td data-td='tr61'></td><td data-td='tr62'>шт.</td><td data-td='tr63'></td><td data-td='tr64'></td></tr>
+        <tr><td data-td='tr70'>Калитка, шириной 1,2 м.</td><td data-td='tr71'></td><td data-td='tr72'>шт.</td><td data-td='tr73'></td><td data-td='tr74'></td></tr>
+        <tr><td data-td='tr80'>Установка забора из профлиста</td><td data-td='tr81'></td><td data-td='tr82'>п.м.</td><td data-td='tr83'></td><td data-td='tr84'></td></tr>
+        <tr><td data-td='tr90'>Установка ворот</td><td data-td='tr91'></td><td data-td='tr92'>шт.</td><td data-td='tr93'></td><td data-td='tr94'></td></tr>
+        <tr><td data-td='trA0'>Установка калитки</td><td data-td='trA1'></td><td data-td='trA2'>шт.</td><td data-td='trA3'></td><td data-td='trA4'></td></tr>
+        <tr><td data-td='trB0'>Работа генератора (длина от 55 м - двойной тариф)</td><td data-td='trB1'></td><td data-td='trB2'></td><td data-td='trB3'></td><td data-td='trB4'></td></tr>
+        <tr><td data-td='trC0'>Расстояние от МКАД, км</td><td data-td='trC1'></td><td data-td='trC2'>км.</td><td data-td='trC3'></td><td data-td='trC4'></td></tr>
+      </tbody>
+    </table>
+  </div>
+ </div>
+</div>
+</body>
+</html>
